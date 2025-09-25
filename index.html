@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="icon" id="favicon" href="./src/img/favicon.ico">
+        <link rel="manifest" href="./manifest.json">
+        <title>Media Player</title>
+        <style>
+            body {
+                background-color: #3d3d3d;
+                color: whitesmoke;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+            #container {
+                text-align: center;
+            }
+
+            #cover{
+                width:  250px;
+                height: 250px;
+                margin: 0 auto;
+                background-position: center;
+                background-size: cover;
+                border-radius: 25px;
+            }
+
+            #artist {
+                opacity: 75%;
+                font-weight: bold;
+            }
+
+            #album {
+                opacity: 50%;
+                font-size: smaller;
+            }
+
+            #fullscreen {
+                margin: 0 auto;
+            }
+
+            #back, #playpause, #skip, #back15, #forward15, #fullscreen {
+                display: none;
+                border: none;
+                border-radius: 10%;
+            }
+
+            #back:hover, #playpause:hover, #skip:hover, #back15:hover, #forward15:hover, #fullscreen:hover {
+                color: grey;
+            }
+
+            #errorText {
+                display: none;
+            }
+
+            #video {
+                width: 50%;
+                height: 25%;
+                margin: 0 auto;
+                border-radius: 5%;
+            }
+
+            #video, #song, #timeHolder {
+                display: none;
+            }
+
+            a {
+                text-align: left;
+            }
+
+            #title {
+                font-weight: bold;
+            }
+
+            #timeRange {
+                display: inline-block;
+                width: 50%;
+                accent-color: orange;
+            }
+
+            #currentTime, #duration {
+                display: inline-block;
+            }
+        </style>
+    </head>
+    <body>
+        <a style="color: #eee; opacity: 25%; text-align: left ;" href="./src/log/devlog.txt" target="_blank">v1.1</a>
+        <div id="container">
+            <form>
+                <input accept="audio/*, video/*" webkitdirectory multiple type="file" id="selector">
+            </form>
+            <br>
+            <div id="body">
+                <video id="video"></video>
+                <input id="fullscreen" type="button" value="Fullscreen">
+                <p id="errorText"></p>
+                <div id="song">
+                    <div id="cover"></div>
+                    <h1 id="title"></h1>
+                    <p id="artist"></p>
+                    <p id="album"></p>
+                </div>
+                <div id="timeHolder">
+                    <p id="currentTime"></p>
+                    <input id="timeRange" type="range">
+                    <p id="duration"></p>
+                </div>
+                <input type="button" class="nowrap" id="back" value="Back">
+                <input type="button" id="back15" value="↺15">
+                <input type="button" class="nowrap" id="playpause" value="Play">
+                <input type="button" id="forward15" value="⟳15">
+                <input type="button" class="nowrap" id="skip" value="Skip">
+            </div>
+        </div>
+    </body>
+    <script src="./src/img/album-placeholder.js"></script>
+    <script src="./src/scripts/jsmediatags.min.js"></script>
+    <script src="./src/scripts/player.js"></script>
+</html>

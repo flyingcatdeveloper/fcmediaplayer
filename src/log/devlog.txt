@@ -1,0 +1,6 @@
+Update/Bug Fix v1.1
+    - Added mediaSession API support
+    - Favicon now changes with artwork
+    - Fixed some bugs
+
+Release v1.0
