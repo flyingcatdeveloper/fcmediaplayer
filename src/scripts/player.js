@@ -3,7 +3,7 @@ if ('serviceWorker' in navigator) {
         try {
             const registration = await navigator.serviceWorker.register('./src/scripts/serviceWorker.js', {
             }, {
-                scope: '/'
+                scope: '/fcmediaplayer/'
             });
             if (registration.active) {
                 console.log('[ServiceWorker] - Activation successful');
