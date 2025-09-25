@@ -1,16 +1,16 @@
 const cacheName = "fcMediaPlayer-v1.1";
 
 const filesToCache = [
-    '/',
-    '/index.html',
-    '/manifest.json',
-    '/src/scripts/jsmediatags.min.js',
-    '/src/scripts/player.js',
-    '/src/log/devlog.txt',
-    '/src/img/album-placeholder.js',
-    '/src/img/favicon.ico',
-    '/src/img/icon512_maskable.png',
-    '/src/img/icon512_rounded.png'
+    './',
+    './index.html',
+    './manifest.json',
+    './src/scripts/jsmediatags.min.js',
+    './src/scripts/player.js',
+    './src/log/devlog.txt',
+    './src/img/album-placeholder.js',
+    './src/img/favicon.ico',
+    './src/img/icon512_maskable.png',
+    './src/img/icon512_rounded.png'
 ]
 
 self.addEventListener("install", e => {
